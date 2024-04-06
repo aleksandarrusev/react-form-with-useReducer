@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="d-flex mt-5 justify-content-center">
+      <div className="card w-50">
+        <div className="card-body">
+          <form>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">
+                Email address
+              </label>
+              <input
+                type="email"
+                className="form-control"
+                id="exampleInputEmail1"
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="exampleInputPassword1" className="form-label">
+                Password
+              </label>
+              <input
+                type="password"
+                className="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div className="mb-3 form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="exampleCheck1"
+              />
+              <label className="form-check-label" htmlFor="exampleCheck1">
+                Subscribe to emails
+              </label>
+            </div>
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+            <button type="submit" className="btn btn-outline-primary ms-3">
+              Reset form
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
